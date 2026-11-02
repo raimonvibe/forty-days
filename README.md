@@ -4,9 +4,11 @@
 
 *quadraginta dies*
 
-**[◈ Enter →](https://LIVE-LINK-COMING-SOON)**
+**[◈ Enter →](https://forty-days-two.vercel.app/)**
 
-<img src="public/screenshot.jpg" alt="XL — forty boxes, one for each day" width="820" />
+<a href="https://forty-days-two.vercel.app/"><img src="public/screenshot.jpg" alt="XL — forty boxes, one for each day" width="820" /></a>
+
+<sub>[forty-days-two.vercel.app](https://forty-days-two.vercel.app/)</sub>
 
 </div>
 
