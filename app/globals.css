@@ -484,7 +484,8 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   padding-bottom: 1px;
 }
 .link.muted { color: var(--muted); }
-.link:hover { color: var(--ink); border-color: var(--ink); }
+.link:hover:not(:disabled) { color: var(--ink); border-color: var(--ink); }
+.link:disabled { opacity: 0.4; cursor: default; }
 .reset-confirm { gap: 14px !important; }
 
 /* ——— responsive ——— */

@@ -189,15 +189,22 @@ export default function Forty() {
         <span><i className="lg lg-falter" /> lapsus</span>
         <span className="legend-hint">tene · dextro</span>
         <span className="legend-spacer" />
-        {touched > 0 &&
-          (confirmReset ? (
-            <span className="reset-confirm">
-              <button className="link" onClick={() => { setStore(empty()); setConfirmReset(false); }}>certe</button>
-              <button className="link muted" onClick={() => setConfirmReset(false)}>non</button>
-            </span>
-          ) : (
-            <button className="link muted" onClick={() => setConfirmReset(true)}>renovare</button>
-          ))}
+        {/* Always rendered: hiding it when empty made it vanish right after a reset. */}
+        {confirmReset && touched > 0 ? (
+          <span className="reset-confirm">
+            <button className="link" title="Yes, clear all days" onClick={() => { setStore(empty()); setConfirmReset(false); }}>certe</button>
+            <button className="link muted" title="No, keep them" onClick={() => setConfirmReset(false)}>non</button>
+          </span>
+        ) : (
+          <button
+            className="link muted"
+            title="Start over"
+            disabled={touched === 0}
+            onClick={() => setConfirmReset(true)}
+          >
+            renovare
+          </button>
+        )}
       </div>
     </>
   );
