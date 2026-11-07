@@ -2,10 +2,10 @@
 
 import { useEffect, useState } from "react";
 
-const THEMES = ["dark", "light", "vesper"] as const;
+const THEMES = ["dark", "light", "vesper", "aurora"] as const;
 type Theme = (typeof THEMES)[number];
 
-const LABELS: Record<Theme, string> = { dark: "Nox", light: "Lux", vesper: "Vesper" };
+const LABELS: Record<Theme, string> = { dark: "Nox", light: "Lux", vesper: "Vesper", aurora: "Aurora" };
 
 function nextOf(theme: Theme): Theme {
   return THEMES[(THEMES.indexOf(theme) + 1) % THEMES.length];

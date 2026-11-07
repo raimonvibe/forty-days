@@ -61,7 +61,7 @@ Built with Next.js. Your marks stay in your own browser and are never sent anywh
 
 - **Tap** a box to keep a day.
 - **Hold** it (or right-click) to mark a *lapsus*: a day you stumbled. It doesn't erase the others.
-- **Nox / Lux / Vesper** cycles between dark, light and a twilight sea-blue theme.
+- **Nox / Lux / Vesper / Aurora** cycles between dark, light, a twilight sea-blue and a rosy dawn theme.
 
 ```bash
 npm install

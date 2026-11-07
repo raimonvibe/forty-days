@@ -50,6 +50,23 @@
   color-scheme: dark;
 }
 
+:root[data-theme="aurora"] {
+  --bg: #f8ebe6;
+  --bg-2: #f1ddd6;
+  --ink: #2a1a22;
+  --muted: #7d6570;
+  --faint: #c9b0b0;
+  --line: rgba(42, 26, 34, 0.12);
+  --line-strong: rgba(42, 26, 34, 0.28);
+  --cell: rgba(255, 255, 255, 0.5);
+  --cell-hover: rgba(255, 255, 255, 0.9);
+  --aura-a: rgba(236, 120, 140, 0.22);
+  --aura-b: rgba(250, 180, 120, 0.3);
+  --grain-opacity: 0.1;
+  --shadow: 0 30px 60px -34px rgba(120, 50, 60, 0.3);
+  color-scheme: light;
+}
+
 :root {
   --grad: linear-gradient(120deg, #5c34a8 0%, #b03070 38%, #e2623e 70%, #e8be68 100%);
   --serif: var(--font-serif), "Cormorant Garamond", Georgia, serif;
@@ -153,6 +170,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 }
 :root[data-theme="light"] .toggle-orb::after { transform: translate(110%, -110%); }
 :root[data-theme="vesper"] .toggle-orb::after { transform: translate(70%, -60%); }
+:root[data-theme="aurora"] .toggle-orb::after { transform: translate(90%, -85%); }
 .toggle-text { min-width: 6ch; text-align: left; }
 
 .foot {
