@@ -61,7 +61,7 @@ export const viewport: Viewport = {
 };
 
 // Sets the theme before first paint so there is no flash.
-const themeScript = `(function(){try{var t=localStorage.getItem('xl.theme');if(['dark','light','vesper'].indexOf(t)<0){t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark'}document.documentElement.dataset.theme=t}catch(e){document.documentElement.dataset.theme='dark'}})();`;
+const themeScript = `(function(){try{var t=localStorage.getItem('xl.theme');if(['dark','light','vesper','aurora'].indexOf(t)<0){t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark'}document.documentElement.dataset.theme=t}catch(e){document.documentElement.dataset.theme='dark'}})();`;
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
