@@ -5,14 +5,19 @@
   --ink: #ece5d6;
   --muted: #8b8498;
   --faint: #4a4555;
-  --line: rgba(236, 229, 214, 0.1);
-  --line-strong: rgba(236, 229, 214, 0.22);
+  --line: rgba(232, 200, 150, 0.11);
+  --line-strong: rgba(232, 200, 150, 0.26);
   --cell: rgba(255, 255, 255, 0.025);
   --cell-hover: rgba(255, 255, 255, 0.06);
   --aura-a: rgba(92, 52, 168, 0.35);
   --aura-b: rgba(226, 98, 62, 0.18);
   --grain-opacity: 0.07;
   --shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.8);
+  --grad: linear-gradient(120deg, #5c34a8 0%, #b03070 38%, #e2623e 70%, #e8be68 100%);
+  --kept-ink: #fff;
+  --kept-edge: rgba(232, 190, 104, 0.28);
+  --kept-shade: 0 1px 2px rgba(20, 8, 30, 0.35);
+  --today-ring: #e8be68;
   color-scheme: dark;
 }
 
@@ -22,14 +27,20 @@
   --ink: #1c1824;
   --muted: #6e6676;
   --faint: #b8afa2;
-  --line: rgba(28, 24, 36, 0.12);
-  --line-strong: rgba(28, 24, 36, 0.28);
-  --cell: rgba(255, 255, 255, 0.45);
-  --cell-hover: rgba(255, 255, 255, 0.85);
-  --aura-a: rgba(176, 48, 112, 0.14);
-  --aura-b: rgba(232, 190, 104, 0.3);
+  --line: rgba(110, 72, 36, 0.15);
+  --line-strong: rgba(110, 72, 36, 0.34);
+  --cell: rgba(255, 252, 244, 0.5);
+  --cell-hover: rgba(255, 252, 244, 0.9);
+  --aura-a: rgba(38, 62, 138, 0.12);
+  --aura-b: rgba(184, 134, 44, 0.26);
   --grain-opacity: 0.12;
   --shadow: 0 30px 60px -34px rgba(60, 40, 20, 0.35);
+  /* Illuminated manuscript: lapis, madder, vermilion, gold on vellum. */
+  --grad: linear-gradient(120deg, #2a4590 0%, #8a3070 36%, #c2412e 68%, #b8862c 100%);
+  --kept-ink: #fffaf0;
+  --kept-edge: rgba(255, 246, 224, 0.5);
+  --kept-shade: 0 1px 2px rgba(40, 20, 10, 0.4);
+  --today-ring: #c2412e;
   color-scheme: light;
 }
 
@@ -39,14 +50,20 @@
   --ink: #e6efe9;
   --muted: #86a0a6;
   --faint: #3f5660;
-  --line: rgba(230, 239, 233, 0.1);
-  --line-strong: rgba(230, 239, 233, 0.24);
+  --line: rgba(232, 168, 100, 0.13);
+  --line-strong: rgba(232, 168, 100, 0.32);
   --cell: rgba(255, 255, 255, 0.03);
   --cell-hover: rgba(255, 255, 255, 0.07);
   --aura-a: rgba(36, 120, 140, 0.34);
   --aura-b: rgba(232, 150, 70, 0.2);
   --grain-opacity: 0.07;
   --shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.8);
+  /* Sunset over the sea: teal water, violet dusk, amber sky. */
+  --grad: linear-gradient(120deg, #3aa3ad 0%, #9590d6 34%, #e2806c 66%, #f0b860 100%);
+  --kept-ink: #fff8ec;
+  --kept-edge: rgba(240, 184, 96, 0.32);
+  --kept-shade: 0 1px 2px rgba(5, 20, 30, 0.4);
+  --today-ring: #f0b860;
   color-scheme: dark;
 }
 
@@ -56,19 +73,47 @@
   --ink: #2a1a22;
   --muted: #7d6570;
   --faint: #c9b0b0;
-  --line: rgba(42, 26, 34, 0.12);
-  --line-strong: rgba(42, 26, 34, 0.28);
+  --line: rgba(160, 64, 96, 0.15);
+  --line-strong: rgba(160, 64, 96, 0.34);
   --cell: rgba(255, 255, 255, 0.5);
   --cell-hover: rgba(255, 255, 255, 0.9);
   --aura-a: rgba(236, 120, 140, 0.22);
   --aura-b: rgba(250, 180, 120, 0.3);
   --grain-opacity: 0.1;
   --shadow: 0 30px 60px -34px rgba(120, 50, 60, 0.3);
+  /* A rose dawn: deep rose, coral, apricot, first gold. */
+  --grad: linear-gradient(120deg, #9c3468 0%, #d24e62 36%, #e07a54 66%, #c8963e 100%);
+  --kept-ink: #fff7f2;
+  --kept-edge: rgba(255, 236, 226, 0.5);
+  --kept-shade: 0 1px 2px rgba(80, 20, 40, 0.4);
+  --today-ring: #d24e62;
   color-scheme: light;
 }
 
+:root[data-theme="oliva"] {
+  /* Mount of Olives: collegiate hunter green, gold leaf, parchment. */
+  --bg: #0c2318;
+  --bg-2: #123022;
+  --ink: #f0e7cd;
+  --muted: #a9b596;
+  --faint: #4d6a55;
+  --line: rgba(201, 162, 74, 0.18);
+  --line-strong: rgba(201, 162, 74, 0.42);
+  --cell: rgba(240, 231, 205, 0.03);
+  --cell-hover: rgba(240, 231, 205, 0.07);
+  --aura-a: rgba(201, 162, 74, 0.2);
+  --aura-b: rgba(46, 128, 78, 0.32);
+  --grain-opacity: 0.08;
+  --shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.85);
+  --grad: linear-gradient(120deg, #9c7a2c 0%, #d8b45a 35%, #f3e2a4 62%, #c9a24a 100%);
+  --kept-ink: #fbf4dc;
+  --kept-edge: rgba(243, 226, 164, 0.35);
+  --kept-shade: 0 1px 2px rgba(20, 30, 10, 0.45);
+  --today-ring: #d8b45a;
+  color-scheme: dark;
+}
+
 :root {
-  --grad: linear-gradient(120deg, #5c34a8 0%, #b03070 38%, #e2623e 70%, #e8be68 100%);
   --serif: var(--font-serif), "Cormorant Garamond", Georgia, serif;
   --mono: var(--font-mono), ui-monospace, monospace;
   --gutter: clamp(16px, 4vw, 48px);
@@ -171,6 +216,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 :root[data-theme="light"] .toggle-orb::after { transform: translate(110%, -110%); }
 :root[data-theme="vesper"] .toggle-orb::after { transform: translate(70%, -60%); }
 :root[data-theme="aurora"] .toggle-orb::after { transform: translate(90%, -85%); }
+:root[data-theme="oliva"] .toggle-orb::after { transform: translate(55%, -45%); }
 .toggle-text { min-width: 6ch; text-align: left; }
 
 .foot {
@@ -250,10 +296,12 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   transition: color 0.2s ease, opacity 0.2s ease, transform 0.15s ease;
 }
 :root[data-theme="dark"] .social-icons .icon,
-:root[data-theme="vesper"] .social-icons .icon { color: rgba(255, 255, 255, 0.72); }
+:root[data-theme="vesper"] .social-icons .icon,
+:root[data-theme="oliva"] .social-icons .icon { color: rgba(255, 255, 255, 0.72); }
 .social-icons .icon:hover { color: rgb(55 65 81); transform: translateY(-1px); }
 :root[data-theme="dark"] .social-icons .icon:hover,
-:root[data-theme="vesper"] .social-icons .icon:hover { color: rgba(255, 255, 255, 0.95); }
+:root[data-theme="vesper"] .social-icons .icon:hover,
+:root[data-theme="oliva"] .social-icons .icon:hover { color: rgba(255, 255, 255, 0.95); }
 .social-svg { display: block; fill: currentColor; transition: opacity 0.2s ease, filter 0.2s ease; }
 .social-svg:not(.social-globe) { opacity: 0.88; }
 .social-icons .icon:hover .social-svg:not(.social-globe) { opacity: 1; filter: saturate(1.15); }
@@ -272,7 +320,11 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 :root[data-theme="vesper"] .social-x,
 :root[data-theme="vesper"] .social-github,
 :root[data-theme="vesper"] .social-medium,
-:root[data-theme="vesper"] .social-tiktok { fill: #fff; }
+:root[data-theme="vesper"] .social-tiktok,
+:root[data-theme="oliva"] .social-x,
+:root[data-theme="oliva"] .social-github,
+:root[data-theme="oliva"] .social-medium,
+:root[data-theme="oliva"] .social-tiktok { fill: #fff; }
 @media (forced-colors: active) {
   .social-svg, .social-svg path { fill: currentColor !important; filter: none; opacity: 1; }
 }
@@ -452,7 +504,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   width: 34%;
   height: 34%;
   fill: none;
-  stroke: #fff;
+  stroke: var(--kept-ink);
   stroke-width: 1.6;
   stroke-linecap: round;
   stroke-linejoin: round;
@@ -468,9 +520,9 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   transition: opacity 0.3s;
 }
 
-.cell.kept { border-color: transparent; box-shadow: 0 10px 30px -12px var(--c1); }
+.cell.kept { border-color: transparent; box-shadow: 0 10px 30px -12px var(--c1), inset 0 0 0 1px var(--kept-edge); }
 .cell.kept::before { clip-path: circle(75% at 50% 50%); }
-.cell.kept .cell-num { color: #fff; }
+.cell.kept .cell-num { color: var(--kept-ink); text-shadow: var(--kept-shade); }
 .cell.kept .cell-idx { color: rgba(255, 255, 255, 0.7); }
 .cell.kept .cell-check { stroke-dashoffset: 0; }
 
@@ -484,7 +536,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   content: "";
   position: absolute;
   inset: -1px;
-  border: 1px solid var(--c1);
+  border: 1px solid var(--today-ring);
   animation: breathe 2.8s ease-in-out infinite;
   pointer-events: none;
 }
@@ -498,7 +550,8 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   letter-spacing: 0.2em;
   text-transform: uppercase;
 }
-.cell.kept .cell-today { color: #fff; }
+.cell.kept .cell-today { color: var(--kept-ink); text-shadow: var(--kept-shade); }
+
 
 /* ——— legend ——— */
 .legend {
