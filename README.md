@@ -61,7 +61,7 @@ Built with Next.js. Your marks stay in your own browser and are never sent anywh
 
 - **Tap** a box to keep a day.
 - **Hold** it (or right-click) to mark a *lapsus*: a day you stumbled. It doesn't erase the others.
-- **Nox / Lux / Vesper / Aurora** cycles between dark, light, a twilight sea-blue and a rosy dawn theme.
+- **Nox / Lux / Vesper / Aurora / Oliva** cycles between dark, light, a twilight sea-blue, a rosy dawn and Oliva — collegiate green and gold, after the Mount of Olives where the forty days after Easter end in the Ascension (Acts 1).
 
 ```bash
 npm install

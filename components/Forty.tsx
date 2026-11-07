@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { colorAt } from "../lib/colors";
+import { colorAt, OLIVA_STOPS } from "../lib/colors";
 import { roman } from "../lib/roman";
 
 const TOTAL = 40;
@@ -104,6 +104,11 @@ export default function Forty() {
                 <stop offset="50%" stopColor={colorAt(0.55)} />
                 <stop offset="100%" stopColor={colorAt(1)} />
               </linearGradient>
+              <linearGradient id="sealGradOliva" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stopColor={colorAt(0, OLIVA_STOPS)} />
+                <stop offset="50%" stopColor={colorAt(0.55, OLIVA_STOPS)} />
+                <stop offset="100%" stopColor={colorAt(1, OLIVA_STOPS)} />
+              </linearGradient>
             </defs>
             <circle cx="60" cy="60" r="56" className="seal-outer" />
             {Array.from({ length: TOTAL }).map((_, i) => {
@@ -117,7 +122,14 @@ export default function Forty() {
                   x1={p(60 + Math.cos(a) * r1)} y1={p(60 + Math.sin(a) * r1)}
                   x2={p(60 + Math.cos(a) * r2)} y2={p(60 + Math.sin(a) * r2)}
                   className={store.marks[i] === 1 ? "tick on" : "tick"}
-                  style={store.marks[i] === 1 ? { stroke: colorAt(i / (TOTAL - 1)) } : undefined}
+                  style={
+                    store.marks[i] === 1
+                      ? ({
+                          "--tc": colorAt(i / (TOTAL - 1)),
+                          "--to": colorAt(i / (TOTAL - 1), OLIVA_STOPS),
+                        } as React.CSSProperties)
+                      : undefined
+                  }
                 />
               );
             })}
@@ -148,6 +160,8 @@ export default function Forty() {
           const style = {
             "--c1": colorAt(t),
             "--c2": colorAt(Math.min(t + 0.12, 1)),
+            "--o1": colorAt(t, OLIVA_STOPS),
+            "--o2": colorAt(Math.min(t + 0.12, 1), OLIVA_STOPS),
             "--d": `${i * 18}ms`,
           } as React.CSSProperties;
           const isToday = today === i;

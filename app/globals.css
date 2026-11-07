@@ -67,8 +67,30 @@
   color-scheme: light;
 }
 
-:root {
+:root[data-theme="oliva"] {
+  /* Mount of Olives: collegiate hunter green, gold leaf, parchment. */
+  --bg: #0c2318;
+  --bg-2: #123022;
+  --ink: #f0e7cd;
+  --muted: #a9b596;
+  --faint: #4d6a55;
+  --line: rgba(201, 162, 74, 0.18);
+  --line-strong: rgba(201, 162, 74, 0.42);
+  --cell: rgba(240, 231, 205, 0.03);
+  --cell-hover: rgba(240, 231, 205, 0.07);
+  --aura-a: rgba(201, 162, 74, 0.2);
+  --aura-b: rgba(46, 128, 78, 0.32);
+  --grain-opacity: 0.08;
+  --shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.85);
+  --grad: linear-gradient(120deg, #9c7a2c 0%, #d8b45a 35%, #f3e2a4 62%, #c9a24a 100%);
+  color-scheme: dark;
+}
+
+:root:not([data-theme="oliva"]) {
   --grad: linear-gradient(120deg, #5c34a8 0%, #b03070 38%, #e2623e 70%, #e8be68 100%);
+}
+
+:root {
   --serif: var(--font-serif), "Cormorant Garamond", Georgia, serif;
   --mono: var(--font-mono), ui-monospace, monospace;
   --gutter: clamp(16px, 4vw, 48px);
@@ -171,6 +193,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 :root[data-theme="light"] .toggle-orb::after { transform: translate(110%, -110%); }
 :root[data-theme="vesper"] .toggle-orb::after { transform: translate(70%, -60%); }
 :root[data-theme="aurora"] .toggle-orb::after { transform: translate(90%, -85%); }
+:root[data-theme="oliva"] .toggle-orb::after { transform: translate(55%, -45%); }
 .toggle-text { min-width: 6ch; text-align: left; }
 
 .foot {
@@ -250,10 +273,12 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   transition: color 0.2s ease, opacity 0.2s ease, transform 0.15s ease;
 }
 :root[data-theme="dark"] .social-icons .icon,
-:root[data-theme="vesper"] .social-icons .icon { color: rgba(255, 255, 255, 0.72); }
+:root[data-theme="vesper"] .social-icons .icon,
+:root[data-theme="oliva"] .social-icons .icon { color: rgba(255, 255, 255, 0.72); }
 .social-icons .icon:hover { color: rgb(55 65 81); transform: translateY(-1px); }
 :root[data-theme="dark"] .social-icons .icon:hover,
-:root[data-theme="vesper"] .social-icons .icon:hover { color: rgba(255, 255, 255, 0.95); }
+:root[data-theme="vesper"] .social-icons .icon:hover,
+:root[data-theme="oliva"] .social-icons .icon:hover { color: rgba(255, 255, 255, 0.95); }
 .social-svg { display: block; fill: currentColor; transition: opacity 0.2s ease, filter 0.2s ease; }
 .social-svg:not(.social-globe) { opacity: 0.88; }
 .social-icons .icon:hover .social-svg:not(.social-globe) { opacity: 1; filter: saturate(1.15); }
@@ -272,7 +297,11 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 :root[data-theme="vesper"] .social-x,
 :root[data-theme="vesper"] .social-github,
 :root[data-theme="vesper"] .social-medium,
-:root[data-theme="vesper"] .social-tiktok { fill: #fff; }
+:root[data-theme="vesper"] .social-tiktok,
+:root[data-theme="oliva"] .social-x,
+:root[data-theme="oliva"] .social-github,
+:root[data-theme="oliva"] .social-medium,
+:root[data-theme="oliva"] .social-tiktok { fill: #fff; }
 @media (forced-colors: active) {
   .social-svg, .social-svg path { fill: currentColor !important; filter: none; opacity: 1; }
 }
@@ -354,7 +383,9 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   transition: stroke-dashoffset 0.9s cubic-bezier(0.5, 0, 0.1, 1);
 }
 .tick { stroke: var(--faint); stroke-width: 0.8; transition: stroke 0.4s; }
-.tick.on { stroke-width: 1.3; }
+.tick.on { stroke-width: 1.3; stroke: var(--tc); }
+:root[data-theme="oliva"] .tick.on { stroke: var(--to); }
+:root[data-theme="oliva"] .seal-arc { stroke: url(#sealGradOliva); }
 .seal-center {
   position: absolute;
   inset: 0;
@@ -499,6 +530,14 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   text-transform: uppercase;
 }
 .cell.kept .cell-today { color: #fff; }
+
+/* Oliva: kept days turn laurel-to-gold, numerals in parchment. */
+:root[data-theme="oliva"] .cell::before { background: linear-gradient(140deg, var(--o1), var(--o2)); }
+:root[data-theme="oliva"] .cell.kept { box-shadow: 0 10px 30px -12px var(--o1), inset 0 0 0 1px rgba(243, 226, 164, 0.35); }
+:root[data-theme="oliva"] .cell.today:not(.kept)::after { border-color: #d8b45a; }
+:root[data-theme="oliva"] .cell.kept .cell-num,
+:root[data-theme="oliva"] .cell.kept .cell-today { color: #fbf4dc; text-shadow: 0 1px 2px rgba(20, 30, 10, 0.45); }
+:root[data-theme="oliva"] .cell.kept .cell-check { stroke: #fbf4dc; }
 
 /* ——— legend ——— */
 .legend {
