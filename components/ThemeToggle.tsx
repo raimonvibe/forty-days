@@ -2,10 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-const THEMES = ["dark", "light", "vesper", "aurora", "oliva"] as const;
-type Theme = (typeof THEMES)[number];
-
-const LABELS: Record<Theme, string> = { dark: "Nox", light: "Lux", vesper: "Vesper", aurora: "Aurora", oliva: "Oliva" };
+import { isTheme, LABELS, THEMES, type Theme } from "../lib/themes";
 
 function nextOf(theme: Theme): Theme {
   return THEMES[(THEMES.indexOf(theme) + 1) % THEMES.length];
@@ -15,8 +12,8 @@ export default function ThemeToggle() {
   const [theme, setTheme] = useState<Theme | null>(null);
 
   useEffect(() => {
-    const current = document.documentElement.dataset.theme as Theme;
-    setTheme(THEMES.includes(current) ? current : "dark");
+    const current = document.documentElement.dataset.theme;
+    setTheme(isTheme(current) ? current : "dark");
   }, []);
 
   function toggle() {

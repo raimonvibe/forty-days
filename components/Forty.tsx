@@ -1,7 +1,8 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { colorAt, OLIVA_STOPS } from "../lib/colors";
+import { colorAt, PALETTES } from "../lib/colors";
+import { useTheme } from "../lib/useTheme";
 import { roman } from "../lib/roman";
 
 const TOTAL = 40;
@@ -17,6 +18,7 @@ const empty = (): Store => ({ start: null, marks: Array(TOTAL).fill(0) });
 const midnight = (d: Date) => new Date(d.getFullYear(), d.getMonth(), d.getDate()).getTime();
 
 export default function Forty() {
+  const palette = PALETTES[useTheme()];
   const [store, setStore] = useState<Store>(empty);
   const [ready, setReady] = useState(false);
   const [confirmReset, setConfirmReset] = useState(false);
@@ -100,14 +102,9 @@ export default function Forty() {
           <svg viewBox="0 0 120 120" className="seal-svg">
             <defs>
               <linearGradient id="sealGrad" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0%" stopColor={colorAt(0)} />
-                <stop offset="50%" stopColor={colorAt(0.55)} />
-                <stop offset="100%" stopColor={colorAt(1)} />
-              </linearGradient>
-              <linearGradient id="sealGradOliva" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0%" stopColor={colorAt(0, OLIVA_STOPS)} />
-                <stop offset="50%" stopColor={colorAt(0.55, OLIVA_STOPS)} />
-                <stop offset="100%" stopColor={colorAt(1, OLIVA_STOPS)} />
+                <stop offset="0%" stopColor={colorAt(0, palette)} />
+                <stop offset="50%" stopColor={colorAt(0.55, palette)} />
+                <stop offset="100%" stopColor={colorAt(1, palette)} />
               </linearGradient>
             </defs>
             <circle cx="60" cy="60" r="56" className="seal-outer" />
@@ -122,14 +119,7 @@ export default function Forty() {
                   x1={p(60 + Math.cos(a) * r1)} y1={p(60 + Math.sin(a) * r1)}
                   x2={p(60 + Math.cos(a) * r2)} y2={p(60 + Math.sin(a) * r2)}
                   className={store.marks[i] === 1 ? "tick on" : "tick"}
-                  style={
-                    store.marks[i] === 1
-                      ? ({
-                          "--tc": colorAt(i / (TOTAL - 1)),
-                          "--to": colorAt(i / (TOTAL - 1), OLIVA_STOPS),
-                        } as React.CSSProperties)
-                      : undefined
-                  }
+                  style={store.marks[i] === 1 ? { stroke: colorAt(i / (TOTAL - 1), palette) } : undefined}
                 />
               );
             })}
@@ -158,10 +148,8 @@ export default function Forty() {
         {store.marks.map((m, i) => {
           const t = i / (TOTAL - 1);
           const style = {
-            "--c1": colorAt(t),
-            "--c2": colorAt(Math.min(t + 0.12, 1)),
-            "--o1": colorAt(t, OLIVA_STOPS),
-            "--o2": colorAt(Math.min(t + 0.12, 1), OLIVA_STOPS),
+            "--c1": colorAt(t, palette),
+            "--c2": colorAt(Math.min(t + 0.12, 1), palette),
             "--d": `${i * 18}ms`,
           } as React.CSSProperties;
           const isToday = today === i;
