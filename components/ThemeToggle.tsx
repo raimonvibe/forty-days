@@ -2,17 +2,25 @@
 
 import { useEffect, useState } from "react";
 
-type Theme = "dark" | "light";
+const THEMES = ["dark", "light", "vesper"] as const;
+type Theme = (typeof THEMES)[number];
+
+const LABELS: Record<Theme, string> = { dark: "Nox", light: "Lux", vesper: "Vesper" };
+
+function nextOf(theme: Theme): Theme {
+  return THEMES[(THEMES.indexOf(theme) + 1) % THEMES.length];
+}
 
 export default function ThemeToggle() {
   const [theme, setTheme] = useState<Theme | null>(null);
 
   useEffect(() => {
-    setTheme((document.documentElement.dataset.theme as Theme) ?? "dark");
+    const current = document.documentElement.dataset.theme as Theme;
+    setTheme(THEMES.includes(current) ? current : "dark");
   }, []);
 
   function toggle() {
-    const next: Theme = theme === "light" ? "dark" : "light";
+    const next = nextOf(theme ?? "dark");
     document.documentElement.dataset.theme = next;
     try {
       localStorage.setItem("xl.theme", next);
@@ -20,12 +28,17 @@ export default function ThemeToggle() {
     setTheme(next);
   }
 
-  const label = theme === "light" ? "Nox" : "Lux";
+  // The label names the theme the button switches to.
+  const upcoming = theme ? nextOf(theme) : null;
 
   return (
-    <button className="toggle" onClick={toggle} aria-label={`Switch to ${theme === "light" ? "dark" : "light"} mode`}>
+    <button
+      className="toggle"
+      onClick={toggle}
+      aria-label={upcoming ? `Switch to ${LABELS[upcoming]} theme` : "Switch theme"}
+    >
       <span className="toggle-orb" aria-hidden="true" />
-      <span className="toggle-text">{theme ? label : " "}</span>
+      <span className="toggle-text">{upcoming ? LABELS[upcoming] : " "}</span>
     </button>
   );
 }

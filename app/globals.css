@@ -33,6 +33,23 @@
   color-scheme: light;
 }
 
+:root[data-theme="vesper"] {
+  --bg: #0a1620;
+  --bg-2: #10212d;
+  --ink: #e6efe9;
+  --muted: #86a0a6;
+  --faint: #3f5660;
+  --line: rgba(230, 239, 233, 0.1);
+  --line-strong: rgba(230, 239, 233, 0.24);
+  --cell: rgba(255, 255, 255, 0.03);
+  --cell-hover: rgba(255, 255, 255, 0.07);
+  --aura-a: rgba(36, 120, 140, 0.34);
+  --aura-b: rgba(232, 150, 70, 0.2);
+  --grain-opacity: 0.07;
+  --shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.8);
+  color-scheme: dark;
+}
+
 :root {
   --grad: linear-gradient(120deg, #5c34a8 0%, #b03070 38%, #e2623e 70%, #e8be68 100%);
   --serif: var(--font-serif), "Cormorant Garamond", Georgia, serif;
@@ -135,7 +152,8 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   transition: transform 0.5s cubic-bezier(0.6, 0, 0.2, 1);
 }
 :root[data-theme="light"] .toggle-orb::after { transform: translate(110%, -110%); }
-.toggle-text { min-width: 3ch; }
+:root[data-theme="vesper"] .toggle-orb::after { transform: translate(70%, -60%); }
+.toggle-text { min-width: 6ch; text-align: left; }
 
 .foot {
   margin-top: auto;
@@ -213,9 +231,11 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   color: rgb(107 114 128);
   transition: color 0.2s ease, opacity 0.2s ease, transform 0.15s ease;
 }
-:root[data-theme="dark"] .social-icons .icon { color: rgba(255, 255, 255, 0.72); }
+:root[data-theme="dark"] .social-icons .icon,
+:root[data-theme="vesper"] .social-icons .icon { color: rgba(255, 255, 255, 0.72); }
 .social-icons .icon:hover { color: rgb(55 65 81); transform: translateY(-1px); }
-:root[data-theme="dark"] .social-icons .icon:hover { color: rgba(255, 255, 255, 0.95); }
+:root[data-theme="dark"] .social-icons .icon:hover,
+:root[data-theme="vesper"] .social-icons .icon:hover { color: rgba(255, 255, 255, 0.95); }
 .social-svg { display: block; fill: currentColor; transition: opacity 0.2s ease, filter 0.2s ease; }
 .social-svg:not(.social-globe) { opacity: 0.88; }
 .social-icons .icon:hover .social-svg:not(.social-globe) { opacity: 1; filter: saturate(1.15); }
@@ -230,7 +250,11 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 :root[data-theme="dark"] .social-x,
 :root[data-theme="dark"] .social-github,
 :root[data-theme="dark"] .social-medium,
-:root[data-theme="dark"] .social-tiktok { fill: #fff; }
+:root[data-theme="dark"] .social-tiktok,
+:root[data-theme="vesper"] .social-x,
+:root[data-theme="vesper"] .social-github,
+:root[data-theme="vesper"] .social-medium,
+:root[data-theme="vesper"] .social-tiktok { fill: #fff; }
 @media (forced-colors: active) {
   .social-svg, .social-svg path { fill: currentColor !important; filter: none; opacity: 1; }
 }
