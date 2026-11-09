@@ -39,6 +39,43 @@ export const PALETTES: Record<Theme, Stops> = {
     [150, 132, 56],
     [190, 150, 64],
   ],
+  // Diluvium: forty days of rain (Gen. 7:12), then the covenant bow — the full rainbow.
+  diluvium: [
+    [92, 80, 190],
+    [44, 118, 190],
+    [40, 150, 120],
+    [206, 176, 56],
+    [226, 120, 56],
+    [200, 64, 84],
+  ],
+  // Sinai: forty days on the mountain in the fire (Ex. 24:17–18) — deep red to white-hot gold.
+  sinai: [
+    [110, 28, 22],
+    [178, 52, 26],
+    [226, 110, 34],
+    [236, 170, 64],
+  ],
+  // Eremus: forty days in the wilderness (Mt. 4:1–2) — terracotta, sienna, ochre, first sage.
+  eremus: [
+    [154, 74, 48],
+    [188, 112, 54],
+    [186, 146, 64],
+    [104, 132, 88],
+  ],
+  // Cinis: ashes that open the forty days of Lent — ash grey deepening into Lenten violet.
+  cinis: [
+    [58, 56, 62],
+    [104, 100, 110],
+    [112, 82, 146],
+    [78, 44, 128],
+  ],
+  // Caelum: the Ascension on the fortieth day (Acts 1:3–11) — deep blue rising into light.
+  caelum: [
+    [30, 52, 118],
+    [48, 104, 184],
+    [84, 148, 204],
+    [198, 152, 58],
+  ],
 };
 
 export function colorAt(t: number, stops: Stops = PALETTES.dark) {
