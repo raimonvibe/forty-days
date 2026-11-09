@@ -66,7 +66,17 @@ Built with Next.js. Your marks stay in your own browser and are never sent anywh
 
 - **Tap** a box to keep a day.
 - **Hold** it (or right-click) to mark a *lapsus*: a day you stumbled. It doesn't erase the others.
-- **Nox / Lux / Vesper / Aurora / Oliva** cycles between dark, light, a twilight sea-blue, a rosy dawn and Oliva — collegiate green and gold, after the Mount of Olives where the forty days after Easter end in the Ascension (Acts 1).
+- **The theme toggle** cycles through ten themes. Each has its own day palette, title gradient, hairlines and a Vulgate verse:
+  - **Nox** — night burning toward dawn (Rom. 13:12)
+  - **Lux** — an illuminated manuscript on vellum (Gen. 1:3)
+  - **Vesper** — sunset over the sea (Luke 24:29)
+  - **Aurora** — a rose dawn (Song 6:9)
+  - **Oliva** — collegiate green and gold, the Mount of Olives (Acts 1:3)
+  - **Diluvium** — forty days of rain, then the rainbow (Gen. 7:12)
+  - **Sinai** — forty days on the mountain in the fire (Ex. 24:18)
+  - **Eremus** — forty days in the wilderness (Matt. 4:1)
+  - **Cinis** — the ashes that open Lent (Gen. 3:19)
+  - **Caelum** — the Ascension on the fortieth day (Acts 1:11)
 
 ```bash
 npm install

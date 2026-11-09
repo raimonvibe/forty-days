@@ -96,6 +96,8 @@ export default function Forty() {
             <span className="title-sub">quadraginta dies</span>
           </h1>
           <p className="motto">Quod incepi, perficiam.</p>
+          {/* Each theme's verse is set in CSS (--verse), so it is right before hydration. */}
+          <p className="verse" />
         </div>
 
         <figure className="seal" aria-label={`${kept} of ${TOTAL}`}>

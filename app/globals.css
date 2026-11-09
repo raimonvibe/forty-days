@@ -18,6 +18,11 @@
   --kept-edge: rgba(232, 190, 104, 0.28);
   --kept-shade: 0 1px 2px rgba(20, 8, 30, 0.35);
   --today-ring: #e8be68;
+  --social-ink: rgba(255, 255, 255, 0.72);
+  --social-ink-hover: rgba(255, 255, 255, 0.95);
+  --social-mono: #fff;
+  --verse: "Nox praecessit, dies autem appropinquavit.";
+  --verse-ref: "Ad Rom. XIII, 12";
   color-scheme: dark;
 }
 
@@ -41,6 +46,11 @@
   --kept-edge: rgba(255, 246, 224, 0.5);
   --kept-shade: 0 1px 2px rgba(40, 20, 10, 0.4);
   --today-ring: #c2412e;
+  --social-ink: rgb(107 114 128);
+  --social-ink-hover: rgb(55 65 81);
+  --social-mono: #000;
+  --verse: "Dixitque Deus: Fiat lux. Et facta est lux.";
+  --verse-ref: "Gen. I, 3";
   color-scheme: light;
 }
 
@@ -64,6 +74,11 @@
   --kept-edge: rgba(240, 184, 96, 0.32);
   --kept-shade: 0 1px 2px rgba(5, 20, 30, 0.4);
   --today-ring: #f0b860;
+  --social-ink: rgba(255, 255, 255, 0.72);
+  --social-ink-hover: rgba(255, 255, 255, 0.95);
+  --social-mono: #fff;
+  --verse: "Mane nobiscum, quoniam advesperascit.";
+  --verse-ref: "Luc. XXIV, 29";
   color-scheme: dark;
 }
 
@@ -87,6 +102,11 @@
   --kept-edge: rgba(255, 236, 226, 0.5);
   --kept-shade: 0 1px 2px rgba(80, 20, 40, 0.4);
   --today-ring: #d24e62;
+  --social-ink: rgb(107 114 128);
+  --social-ink-hover: rgb(55 65 81);
+  --social-mono: #000;
+  --verse: "Quae est ista, quae progreditur quasi aurora consurgens?";
+  --verse-ref: "Cant. VI, 9";
   color-scheme: light;
 }
 
@@ -110,7 +130,152 @@
   --kept-edge: rgba(243, 226, 164, 0.35);
   --kept-shade: 0 1px 2px rgba(20, 30, 10, 0.45);
   --today-ring: #d8b45a;
+  --social-ink: rgba(255, 255, 255, 0.72);
+  --social-ink-hover: rgba(255, 255, 255, 0.95);
+  --social-mono: #fff;
+  --verse: "Per dies quadraginta apparens eis.";
+  --verse-ref: "Act. I, 3";
   color-scheme: dark;
+}
+
+:root[data-theme="diluvium"] {
+  /* The Flood: forty days of storm, then the covenant bow. */
+  --bg: #0a1018;
+  --bg-2: #111a26;
+  --ink: #e4eaf2;
+  --muted: #8494a8;
+  --faint: #3a4658;
+  --line: rgba(160, 190, 230, 0.11);
+  --line-strong: rgba(160, 190, 230, 0.27);
+  --cell: rgba(255, 255, 255, 0.03);
+  --cell-hover: rgba(255, 255, 255, 0.07);
+  --aura-a: rgba(60, 90, 170, 0.34);
+  --aura-b: rgba(210, 170, 80, 0.14);
+  --grain-opacity: 0.09;
+  --shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.85);
+  --grad: linear-gradient(120deg, #7a6ad8 0%, #4aa0e0 22%, #4cc0a0 42%, #e8d060 62%, #f0904c 80%, #e05a6a 100%);
+  --kept-ink: #fff;
+  --kept-edge: rgba(255, 255, 255, 0.22);
+  --kept-shade: 0 1px 2px rgba(0, 0, 20, 0.45);
+  --today-ring: #8fc8ff;
+  --social-ink: rgba(255, 255, 255, 0.72);
+  --social-ink-hover: rgba(255, 255, 255, 0.95);
+  --social-mono: #fff;
+  --verse: "Et facta est pluvia super terram quadraginta diebus et quadraginta noctibus.";
+  --verse-ref: "Gen. VII, 12";
+  color-scheme: dark;
+}
+
+:root[data-theme="sinai"] {
+  /* Sinai: forty days on the mountain, in the cloud and the fire. */
+  --bg: #110c0a;
+  --bg-2: #1c1410;
+  --ink: #f2e6d8;
+  --muted: #a8907e;
+  --faint: #54443a;
+  --line: rgba(230, 140, 70, 0.13);
+  --line-strong: rgba(230, 140, 70, 0.32);
+  --cell: rgba(255, 240, 220, 0.03);
+  --cell-hover: rgba(255, 240, 220, 0.07);
+  --aura-a: rgba(200, 60, 30, 0.3);
+  --aura-b: rgba(250, 180, 80, 0.16);
+  --grain-opacity: 0.09;
+  --shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.85);
+  --grad: linear-gradient(120deg, #a8261a 0%, #d2461c 32%, #f29a34 62%, #fbe0a0 100%);
+  --kept-ink: #fff6e8;
+  --kept-edge: rgba(251, 224, 160, 0.3);
+  --kept-shade: 0 1px 2px rgba(40, 8, 0, 0.5);
+  --today-ring: #f29a34;
+  --social-ink: rgba(255, 255, 255, 0.72);
+  --social-ink-hover: rgba(255, 255, 255, 0.95);
+  --social-mono: #fff;
+  --verse: "Fuitque ibi quadraginta diebus et quadraginta noctibus.";
+  --verse-ref: "Ex. XXIV, 18";
+  color-scheme: dark;
+}
+
+:root[data-theme="eremus"] {
+  /* The wilderness: sand, sun and stone, and the first green. */
+  --bg: #efe3cc;
+  --bg-2: #e6d5b6;
+  --ink: #2b1d12;
+  --muted: #7e6650;
+  --faint: #c4ac88;
+  --line: rgba(140, 90, 40, 0.16);
+  --line-strong: rgba(140, 90, 40, 0.36);
+  --cell: rgba(255, 250, 238, 0.45);
+  --cell-hover: rgba(255, 250, 238, 0.85);
+  --aura-a: rgba(214, 140, 70, 0.24);
+  --aura-b: rgba(130, 150, 100, 0.22);
+  --grain-opacity: 0.15;
+  --shadow: 0 30px 60px -34px rgba(90, 60, 20, 0.32);
+  --grad: linear-gradient(120deg, #9a4a2c 0%, #c4783a 36%, #c9a050 66%, #6f8a5c 100%);
+  --kept-ink: #fffaf0;
+  --kept-edge: rgba(255, 244, 220, 0.45);
+  --kept-shade: 0 1px 2px rgba(60, 30, 10, 0.4);
+  --today-ring: #9a4a2c;
+  --social-ink: rgb(107 114 128);
+  --social-ink-hover: rgb(55 65 81);
+  --social-mono: #000;
+  --verse: "Tunc Iesus ductus est in desertum a Spiritu.";
+  --verse-ref: "Matth. IV, 1";
+  color-scheme: light;
+}
+
+:root[data-theme="cinis"] {
+  /* Ashes: the grey that opens Lent, deepening into its violet. */
+  --bg: #e6e4e1;
+  --bg-2: #d9d6d2;
+  --ink: #1a191c;
+  --muted: #6c6870;
+  --faint: #b2aeb0;
+  --line: rgba(30, 28, 34, 0.13);
+  --line-strong: rgba(30, 28, 34, 0.3);
+  --cell: rgba(255, 255, 255, 0.4);
+  --cell-hover: rgba(255, 255, 255, 0.8);
+  --aura-a: rgba(100, 66, 150, 0.16);
+  --aura-b: rgba(60, 60, 64, 0.12);
+  --grain-opacity: 0.17;
+  --shadow: 0 30px 60px -34px rgba(20, 20, 24, 0.3);
+  --grad: linear-gradient(120deg, #2c2a30 0%, #6a6470 32%, #7a58a6 66%, #4a2c80 100%);
+  --kept-ink: #f6f2fa;
+  --kept-edge: rgba(255, 255, 255, 0.35);
+  --kept-shade: 0 1px 2px rgba(10, 0, 20, 0.4);
+  --today-ring: #6c4c96;
+  --social-ink: rgb(107 114 128);
+  --social-ink-hover: rgb(55 65 81);
+  --social-mono: #000;
+  --verse: "Memento, homo, quia pulvis es, et in pulverem reverteris.";
+  --verse-ref: "Gen. III, 19";
+  color-scheme: light;
+}
+
+:root[data-theme="caelum"] {
+  /* The Ascension: open sky on the fortieth day, and light breaking through. */
+  --bg: #e9f0f6;
+  --bg-2: #dbe6f0;
+  --ink: #12203a;
+  --muted: #5f7088;
+  --faint: #a9b8ca;
+  --line: rgba(40, 80, 140, 0.14);
+  --line-strong: rgba(40, 80, 140, 0.32);
+  --cell: rgba(255, 255, 255, 0.55);
+  --cell-hover: rgba(255, 255, 255, 0.92);
+  --aura-a: rgba(120, 170, 230, 0.3);
+  --aura-b: rgba(240, 200, 110, 0.3);
+  --grain-opacity: 0.08;
+  --shadow: 0 30px 60px -34px rgba(30, 50, 90, 0.25);
+  --grad: linear-gradient(120deg, #1e3a80 0%, #3a78c8 36%, #7ab4e0 62%, #d6a640 100%);
+  --kept-ink: #fff;
+  --kept-edge: rgba(255, 255, 255, 0.55);
+  --kept-shade: 0 1px 2px rgba(10, 20, 50, 0.4);
+  --today-ring: #3a78c8;
+  --social-ink: rgb(107 114 128);
+  --social-ink-hover: rgb(55 65 81);
+  --social-mono: #000;
+  --verse: "Viri Galilaei, quid statis aspicientes in caelum?";
+  --verse-ref: "Act. I, 11";
+  color-scheme: light;
 }
 
 :root {
@@ -217,7 +382,12 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 :root[data-theme="vesper"] .toggle-orb::after { transform: translate(70%, -60%); }
 :root[data-theme="aurora"] .toggle-orb::after { transform: translate(90%, -85%); }
 :root[data-theme="oliva"] .toggle-orb::after { transform: translate(55%, -45%); }
-.toggle-text { min-width: 6ch; text-align: left; }
+:root[data-theme="diluvium"] .toggle-orb::after { transform: translate(60%, -25%); }
+:root[data-theme="sinai"] .toggle-orb::after { transform: translate(30%, -20%); }
+:root[data-theme="eremus"] .toggle-orb::after { transform: translate(85%, -70%); }
+:root[data-theme="cinis"] .toggle-orb::after { transform: translate(75%, -15%); }
+:root[data-theme="caelum"] .toggle-orb::after { transform: translate(100%, -95%); }
+.toggle-text { min-width: 8ch; text-align: left; }
 
 .foot {
   margin-top: auto;
@@ -292,39 +462,22 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  color: rgb(107 114 128);
+  color: var(--social-ink);
   transition: color 0.2s ease, opacity 0.2s ease, transform 0.15s ease;
 }
-:root[data-theme="dark"] .social-icons .icon,
-:root[data-theme="vesper"] .social-icons .icon,
-:root[data-theme="oliva"] .social-icons .icon { color: rgba(255, 255, 255, 0.72); }
-.social-icons .icon:hover { color: rgb(55 65 81); transform: translateY(-1px); }
-:root[data-theme="dark"] .social-icons .icon:hover,
-:root[data-theme="vesper"] .social-icons .icon:hover,
-:root[data-theme="oliva"] .social-icons .icon:hover { color: rgba(255, 255, 255, 0.95); }
+
+.social-icons .icon:hover { color: var(--social-ink-hover); transform: translateY(-1px); }
 .social-svg { display: block; fill: currentColor; transition: opacity 0.2s ease, filter 0.2s ease; }
 .social-svg:not(.social-globe) { opacity: 0.88; }
 .social-icons .icon:hover .social-svg:not(.social-globe) { opacity: 1; filter: saturate(1.15); }
 .social-youtube { fill: #ff0000; }
 .social-facebook { fill: #1877f2; }
 .social-linkedin { fill: #0a66c2; }
-.social-x, .social-github, .social-medium, .social-tiktok { fill: #000; }
+/* The four black brands follow the theme so they never vanish on dark backgrounds. */
+.social-x, .social-github, .social-medium, .social-tiktok { fill: var(--social-mono); }
 .social-tiktok .tiktok-cyan { fill: #25f4ee; }
 .social-tiktok .tiktok-magenta { fill: #fe2c55; }
 .social-instagram { fill: url(#ig-gradient); }
-/* The four black brands would vanish against the dark background. */
-:root[data-theme="dark"] .social-x,
-:root[data-theme="dark"] .social-github,
-:root[data-theme="dark"] .social-medium,
-:root[data-theme="dark"] .social-tiktok,
-:root[data-theme="vesper"] .social-x,
-:root[data-theme="vesper"] .social-github,
-:root[data-theme="vesper"] .social-medium,
-:root[data-theme="vesper"] .social-tiktok,
-:root[data-theme="oliva"] .social-x,
-:root[data-theme="oliva"] .social-github,
-:root[data-theme="oliva"] .social-medium,
-:root[data-theme="oliva"] .social-tiktok { fill: #fff; }
 @media (forced-colors: active) {
   .social-svg, .social-svg path { fill: currentColor !important; filter: none; opacity: 1; }
 }
@@ -388,6 +541,26 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   font-size: 17px;
   color: var(--ink);
   opacity: 0.75;
+}
+.verse {
+  margin-top: 14px;
+  max-width: 42ch;
+  font-style: italic;
+  font-size: 17px;
+  line-height: 1.4;
+  color: var(--muted);
+}
+.verse::before { content: "\201C" var(--verse) "\201D"; }
+.verse::after {
+  content: var(--verse-ref);
+  display: block;
+  margin-top: 6px;
+  font-family: var(--mono);
+  font-style: normal;
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  opacity: 0.8;
 }
 
 /* ——— seal ——— */

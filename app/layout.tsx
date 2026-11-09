@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { SITE_DESCRIPTION, SITE_NAME, SITE_SHORT, SITE_URL } from "../lib/brand";
+import { THEMES } from "../lib/themes";
 
 const serif = Cormorant_Garamond({
   subsets: ["latin"],
@@ -61,7 +62,7 @@ export const viewport: Viewport = {
 };
 
 // Sets the theme before first paint so there is no flash.
-const themeScript = `(function(){try{var t=localStorage.getItem('xl.theme');if(['dark','light','vesper','aurora','oliva'].indexOf(t)<0){t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark'}document.documentElement.dataset.theme=t}catch(e){document.documentElement.dataset.theme='dark'}})();`;
+const themeScript = `(function(){try{var t=localStorage.getItem('xl.theme');if(${JSON.stringify(THEMES)}.indexOf(t)<0){t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark'}document.documentElement.dataset.theme=t}catch(e){document.documentElement.dataset.theme='dark'}})();`;
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
