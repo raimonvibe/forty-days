@@ -1,5 +1,6 @@
 :root,
-:root[data-theme="dark"] {
+[data-theme="dark"] {
+  --kept-glow: 0 0 0 transparent;
   --bg: #0b0a10;
   --bg-2: #14111c;
   --ink: #ece5d6;
@@ -26,7 +27,7 @@
   color-scheme: dark;
 }
 
-:root[data-theme="light"] {
+[data-theme="light"] {
   --bg: #f3eee3;
   --bg-2: #ebe3d3;
   --ink: #1c1824;
@@ -54,7 +55,7 @@
   color-scheme: light;
 }
 
-:root[data-theme="vesper"] {
+[data-theme="vesper"] {
   --bg: #0a1620;
   --bg-2: #10212d;
   --ink: #e6efe9;
@@ -82,7 +83,7 @@
   color-scheme: dark;
 }
 
-:root[data-theme="aurora"] {
+[data-theme="aurora"] {
   --bg: #f8ebe6;
   --bg-2: #f1ddd6;
   --ink: #2a1a22;
@@ -110,7 +111,7 @@
   color-scheme: light;
 }
 
-:root[data-theme="oliva"] {
+[data-theme="oliva"] {
   /* Mount of Olives: collegiate hunter green, gold leaf, parchment. */
   --bg: #0c2318;
   --bg-2: #123022;
@@ -138,7 +139,7 @@
   color-scheme: dark;
 }
 
-:root[data-theme="diluvium"] {
+[data-theme="diluvium"] {
   /* The Flood: forty days of storm, then the covenant bow. */
   --bg: #0a1018;
   --bg-2: #111a26;
@@ -166,7 +167,7 @@
   color-scheme: dark;
 }
 
-:root[data-theme="sinai"] {
+[data-theme="sinai"] {
   /* Sinai: forty days on the mountain, in the cloud and the fire. */
   --bg: #110c0a;
   --bg-2: #1c1410;
@@ -194,7 +195,7 @@
   color-scheme: dark;
 }
 
-:root[data-theme="eremus"] {
+[data-theme="eremus"] {
   /* The wilderness: sand, sun and stone, and the first green. */
   --bg: #efe3cc;
   --bg-2: #e6d5b6;
@@ -222,7 +223,7 @@
   color-scheme: light;
 }
 
-:root[data-theme="cinis"] {
+[data-theme="cinis"] {
   /* Ashes: the grey that opens Lent, deepening into its violet. */
   --bg: #e6e4e1;
   --bg-2: #d9d6d2;
@@ -250,7 +251,7 @@
   color-scheme: light;
 }
 
-:root[data-theme="caelum"] {
+[data-theme="caelum"] {
   /* The Ascension: open sky on the fortieth day, and light breaking through. */
   --bg: #e9f0f6;
   --bg-2: #dbe6f0;
@@ -275,6 +276,441 @@
   --social-mono: #000;
   --verse: "Viri Galilaei, quid statis aspicientes in caelum?";
   --verse-ref: "Act. I, 11";
+  color-scheme: light;
+}
+
+[data-theme="ninive"] {
+  /* Jonah in the deep: an abyss lit by living light. */
+  --bg: #030e14;
+  --bg-2: #071a22;
+  --ink: #d8f3ee;
+  --muted: #6f9ea0;
+  --faint: #22434a;
+  --line: rgba(80, 220, 200, 0.12);
+  --line-strong: rgba(80, 220, 200, 0.3);
+  --cell: rgba(120, 255, 230, 0.025);
+  --cell-hover: rgba(120, 255, 230, 0.06);
+  --aura-a: rgba(20, 140, 170, 0.32);
+  --aura-b: rgba(60, 220, 180, 0.15);
+  --grain-opacity: 0.08;
+  --shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.9);
+  --grad: linear-gradient(120deg, #1a5f9e 0%, #14a3b8 34%, #3fe0c4 64%, #b8fff0 100%);
+  --kept-ink: #f0fffb;
+  --kept-edge: rgba(120, 255, 230, 0.35);
+  --kept-shade: 0 1px 3px rgba(0, 20, 30, 0.6);
+  --kept-glow: 0 0 22px -4px rgba(63, 224, 196, 0.55);
+  --today-ring: #3fe0c4;
+  --social-ink: rgba(255, 255, 255, 0.72);
+  --social-ink-hover: rgba(255, 255, 255, 0.95);
+  --social-mono: #fff;
+  --verse: "Adhuc quadraginta dies, et Nineve subvertetur.";
+  --verse-ref: "Ion. III, 4";
+  color-scheme: dark;
+}
+
+[data-theme="horeb"] {
+  /* Horeb: a night walk to the mountain, then a still small voice in moonlight. */
+  --bg: #0e1018;
+  --bg-2: #161925;
+  --ink: #e8eaf2;
+  --muted: #9298ae;
+  --faint: #3c4154;
+  --line: rgba(200, 206, 230, 0.12);
+  --line-strong: rgba(200, 206, 230, 0.28);
+  --cell: rgba(255, 255, 255, 0.025);
+  --cell-hover: rgba(255, 255, 255, 0.06);
+  --aura-a: rgba(150, 160, 220, 0.2);
+  --aura-b: rgba(220, 224, 240, 0.1);
+  --grain-opacity: 0.08;
+  --shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.85);
+  --grad: linear-gradient(120deg, #5d6688 0%, #a3abc8 34%, #eef0fa 58%, #b4a8d8 100%);
+  --kept-ink: #fff;
+  --kept-edge: rgba(238, 240, 250, 0.35);
+  --kept-shade: 0 1px 2px rgba(10, 10, 30, 0.5);
+  --kept-glow: 0 0 0 transparent;
+  --today-ring: #c8cde6;
+  --social-ink: rgba(255, 255, 255, 0.72);
+  --social-ink-hover: rgba(255, 255, 255, 0.95);
+  --social-mono: #fff;
+  --verse: "Ambulavit in fortitudine cibi illius quadraginta diebus et quadraginta noctibus.";
+  --verse-ref: "III Reg. XIX, 8";
+  color-scheme: dark;
+}
+
+[data-theme="canaan"] {
+  /* Canaan: the cluster of grapes, wine, pomegranates, milk and honey. */
+  --bg: #150910;
+  --bg-2: #20101a;
+  --ink: #f3e4e8;
+  --muted: #a88a96;
+  --faint: #4e3040;
+  --line: rgba(226, 160, 60, 0.13);
+  --line-strong: rgba(226, 160, 60, 0.32);
+  --cell: rgba(255, 230, 240, 0.025);
+  --cell-hover: rgba(255, 230, 240, 0.06);
+  --aura-a: rgba(130, 24, 70, 0.34);
+  --aura-b: rgba(226, 160, 40, 0.16);
+  --grain-opacity: 0.08;
+  --shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.85);
+  --grad: linear-gradient(120deg, #6a2490 0%, #a01848 30%, #d8344e 60%, #f0b030 100%);
+  --kept-ink: #fff6ec;
+  --kept-edge: rgba(240, 176, 48, 0.3);
+  --kept-shade: 0 1px 2px rgba(40, 0, 20, 0.5);
+  --kept-glow: 0 0 0 transparent;
+  --today-ring: #f0b030;
+  --social-ink: rgba(255, 255, 255, 0.72);
+  --social-ink-hover: rgba(255, 255, 255, 0.95);
+  --social-mono: #fff;
+  --verse: "Reversique exploratores terrae post quadraginta dies.";
+  --verse-ref: "Num. XIII, 26";
+  color-scheme: dark;
+}
+
+[data-theme="columba"] {
+  /* Columba: the dove at the window of the ark, pearl and every colour of the shell. */
+  --bg: #f3f2ef;
+  --bg-2: #e9e7e3;
+  --ink: #1e2128;
+  --muted: #6d7280;
+  --faint: #bcbec4;
+  --line: rgba(120, 110, 160, 0.15);
+  --line-strong: rgba(120, 110, 160, 0.32);
+  --cell: rgba(255, 255, 255, 0.6);
+  --cell-hover: rgba(255, 255, 255, 0.95);
+  --aura-a: rgba(170, 150, 230, 0.24);
+  --aura-b: rgba(120, 210, 200, 0.24);
+  --grain-opacity: 0.09;
+  --shadow: 0 30px 60px -34px rgba(60, 60, 90, 0.25);
+  --grad: linear-gradient(120deg, #8a78c8 0%, #5fb0c8 28%, #78c8a0 52%, #d8b070 76%, #c890b8 100%);
+  --kept-ink: #fff;
+  --kept-edge: rgba(255, 255, 255, 0.6);
+  --kept-shade: 0 1px 2px rgba(30, 30, 60, 0.4);
+  --kept-glow: 0 0 16px -6px rgba(200, 180, 255, 0.6);
+  --today-ring: #8a78c8;
+  --social-ink: rgb(107 114 128);
+  --social-ink-hover: rgb(55 65 81);
+  --social-mono: #000;
+  --verse: "Cumque transissent quadraginta dies, aperiens Noe fenestram arcae.";
+  --verse-ref: "Gen. VIII, 6";
+  color-scheme: light;
+}
+
+[data-theme="iordanes"] {
+  /* Iordanes: the river where the forty days begin, and the heavens opened. */
+  --bg: #e3f0ec;
+  --bg-2: #d3e6e0;
+  --ink: #0f2a2a;
+  --muted: #557a76;
+  --faint: #a6c4be;
+  --line: rgba(20, 110, 110, 0.15);
+  --line-strong: rgba(20, 110, 110, 0.33);
+  --cell: rgba(255, 255, 255, 0.5);
+  --cell-hover: rgba(255, 255, 255, 0.9);
+  --aura-a: rgba(40, 170, 160, 0.24);
+  --aura-b: rgba(250, 220, 140, 0.32);
+  --grain-opacity: 0.09;
+  --shadow: 0 30px 60px -34px rgba(10, 60, 60, 0.28);
+  --grad: linear-gradient(120deg, #0e5a6a 0%, #16968c 36%, #58c0a0 62%, #e0b850 100%);
+  --kept-ink: #fff;
+  --kept-edge: rgba(255, 255, 255, 0.5);
+  --kept-shade: 0 1px 2px rgba(0, 30, 30, 0.4);
+  --kept-glow: 0 0 0 transparent;
+  --today-ring: #16968c;
+  --social-ink: rgb(107 114 128);
+  --social-ink-hover: rgb(55 65 81);
+  --social-mono: #000;
+  --verse: "Baptizatus autem Iesus, confestim ascendit de aqua.";
+  --verse-ref: "Matth. III, 16";
+  color-scheme: light;
+}
+
+[data-theme="smaragdus"] {
+  /* Smaragdus: an emerald rainbow round the throne, on emerald itself. */
+  --bg: #0b3d2a;
+  --bg-2: #0f4a33;
+  --ink: #e6f5ec;
+  --muted: #8fbfa4;
+  --faint: #2f6a50;
+  --line: rgba(120, 230, 160, 0.15);
+  --line-strong: rgba(120, 230, 160, 0.34);
+  --cell: rgba(255, 255, 255, 0.04);
+  --cell-hover: rgba(255, 255, 255, 0.09);
+  --aura-a: rgba(40, 200, 120, 0.26);
+  --aura-b: rgba(180, 255, 200, 0.1);
+  --grain-opacity: 0.08;
+  --shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.75);
+  --grad: linear-gradient(120deg, #0e8a54 0%, #2fc07a 35%, #9ef0b8 62%, #20a060 100%);
+  --kept-ink: #f2fff6;
+  --kept-edge: rgba(160, 255, 200, 0.3);
+  --kept-shade: 0 1px 2px rgba(0, 30, 15, 0.5);
+  --kept-glow: 0 0 18px -6px rgba(60, 220, 130, 0.45);
+  --today-ring: #5fe09a;
+  --social-ink: rgba(255, 255, 255, 0.72);
+  --social-ink-hover: rgba(255, 255, 255, 0.95);
+  --social-mono: #fff;
+  --verse: "Et iris erat in circuitu sedis similis visioni smaragdinae.";
+  --verse-ref: "Apoc. IV, 3";
+  color-scheme: dark;
+}
+
+[data-theme="purpura"] {
+  /* Purpura: the purple robe of the Passion, royal violet on violet. */
+  --bg: #2a1240;
+  --bg-2: #34184e;
+  --ink: #f1e8fa;
+  --muted: #b39cc8;
+  --faint: #5a3e78;
+  --line: rgba(200, 160, 240, 0.15);
+  --line-strong: rgba(200, 160, 240, 0.34);
+  --cell: rgba(255, 255, 255, 0.04);
+  --cell-hover: rgba(255, 255, 255, 0.09);
+  --aura-a: rgba(150, 80, 220, 0.3);
+  --aura-b: rgba(220, 120, 200, 0.15);
+  --grain-opacity: 0.08;
+  --shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.75);
+  --grad: linear-gradient(120deg, #7a3cc8 0%, #a868e8 38%, #e0c0ff 66%, #9050d0 100%);
+  --kept-ink: #fff;
+  --kept-edge: rgba(230, 200, 255, 0.3);
+  --kept-shade: 0 1px 2px rgba(20, 0, 40, 0.5);
+  --kept-glow: 0 0 0 transparent;
+  --today-ring: #c69af0;
+  --social-ink: rgba(255, 255, 255, 0.72);
+  --social-ink-hover: rgba(255, 255, 255, 0.95);
+  --social-mono: #fff;
+  --verse: "Et induunt eum purpuram, et imponunt ei plectentes spineam coronam.";
+  --verse-ref: "Marc. XV, 17";
+  color-scheme: dark;
+}
+
+[data-theme="punica"] {
+  /* Punica: the pomegranate, fuchsia and magenta. */
+  --bg: #2c0820;
+  --bg-2: #3a0c2a;
+  --ink: #fde6f2;
+  --muted: #c890ac;
+  --faint: #6a2a4c;
+  --line: rgba(255, 120, 190, 0.15);
+  --line-strong: rgba(255, 120, 190, 0.34);
+  --cell: rgba(255, 255, 255, 0.04);
+  --cell-hover: rgba(255, 255, 255, 0.09);
+  --aura-a: rgba(220, 30, 140, 0.3);
+  --aura-b: rgba(255, 90, 120, 0.14);
+  --grain-opacity: 0.08;
+  --shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.75);
+  --grad: linear-gradient(120deg, #b0106e 0%, #e02c8c 36%, #ff7ab8 64%, #c81860 100%);
+  --kept-ink: #fff;
+  --kept-edge: rgba(255, 180, 220, 0.3);
+  --kept-shade: 0 1px 2px rgba(40, 0, 20, 0.5);
+  --kept-glow: 0 0 16px -6px rgba(255, 60, 160, 0.45);
+  --today-ring: #ff7ab8;
+  --social-ink: rgba(255, 255, 255, 0.72);
+  --social-ink-hover: rgba(255, 255, 255, 0.95);
+  --social-mono: #fff;
+  --verse: "Sicut fragmen mali punici, ita genae tuae.";
+  --verse-ref: "Cant. IV, 3";
+  color-scheme: dark;
+}
+
+[data-theme="passio"] {
+  /* Passio: Gethsemane, oxblood and crimson. */
+  --bg: #36090d;
+  --bg-2: #440c12;
+  --ink: #fbe8e6;
+  --muted: #c8958f;
+  --faint: #6e2a2a;
+  --line: rgba(255, 140, 120, 0.15);
+  --line-strong: rgba(255, 140, 120, 0.34);
+  --cell: rgba(255, 255, 255, 0.04);
+  --cell-hover: rgba(255, 255, 255, 0.09);
+  --aura-a: rgba(200, 20, 30, 0.32);
+  --aura-b: rgba(255, 120, 80, 0.12);
+  --grain-opacity: 0.08;
+  --shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.75);
+  --grad: linear-gradient(120deg, #a8121c 0%, #d42a2c 36%, #f5705a 64%, #b8161e 100%);
+  --kept-ink: #fff4f0;
+  --kept-edge: rgba(255, 170, 150, 0.28);
+  --kept-shade: 0 1px 2px rgba(30, 0, 0, 0.5);
+  --kept-glow: 0 0 0 transparent;
+  --today-ring: #f05a48;
+  --social-ink: rgba(255, 255, 255, 0.72);
+  --social-ink-hover: rgba(255, 255, 255, 0.95);
+  --social-mono: #fff;
+  --verse: "Et factus est sudor eius sicut guttae sanguinis decurrentis in terram.";
+  --verse-ref: "Luc. XXII, 44";
+  color-scheme: dark;
+}
+
+[data-theme="mare"] {
+  /* Mare: walking on the sea in the fourth watch, navy and cobalt. */
+  --bg: #0a1d44;
+  --bg-2: #0f2654;
+  --ink: #e6eefc;
+  --muted: #8ea6d0;
+  --faint: #2e4a80;
+  --line: rgba(140, 180, 255, 0.15);
+  --line-strong: rgba(140, 180, 255, 0.34);
+  --cell: rgba(255, 255, 255, 0.04);
+  --cell-hover: rgba(255, 255, 255, 0.09);
+  --aura-a: rgba(40, 90, 220, 0.32);
+  --aura-b: rgba(140, 200, 255, 0.12);
+  --grain-opacity: 0.08;
+  --shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.75);
+  --grad: linear-gradient(120deg, #2e62d8 0%, #5a92f4 36%, #c4dcff 64%, #3a6ad8 100%);
+  --kept-ink: #fff;
+  --kept-edge: rgba(190, 215, 255, 0.3);
+  --kept-shade: 0 1px 2px rgba(0, 10, 40, 0.5);
+  --kept-glow: 0 0 0 transparent;
+  --today-ring: #7aaaff;
+  --social-ink: rgba(255, 255, 255, 0.72);
+  --social-ink-hover: rgba(255, 255, 255, 0.95);
+  --social-mono: #fff;
+  --verse: "Quarta autem vigilia noctis, venit ad eos ambulans super mare.";
+  --verse-ref: "Matth. XIV, 25";
+  color-scheme: dark;
+}
+
+[data-theme="arca"] {
+  /* Arca: the ark of acacia wood, walnut, cedar and oak. */
+  --bg: #1a110b;
+  --bg-2: #24180f;
+  --ink: #f0e2d2;
+  --muted: #a88c74;
+  --faint: #4e3a2a;
+  --line: rgba(200, 150, 100, 0.14);
+  --line-strong: rgba(200, 150, 100, 0.32);
+  --cell: rgba(255, 240, 220, 0.03);
+  --cell-hover: rgba(255, 240, 220, 0.07);
+  --aura-a: rgba(150, 90, 40, 0.3);
+  --aura-b: rgba(220, 160, 100, 0.12);
+  --grain-opacity: 0.12;
+  --shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.85);
+  --grad: linear-gradient(120deg, #7a4c28 0%, #b07840 36%, #e6c094 64%, #946032 100%);
+  --kept-ink: #fff8ee;
+  --kept-edge: rgba(240, 200, 150, 0.28);
+  --kept-shade: 0 1px 2px rgba(20, 8, 0, 0.5);
+  --kept-glow: 0 0 0 transparent;
+  --today-ring: #d0a070;
+  --social-ink: rgba(255, 255, 255, 0.72);
+  --social-ink-hover: rgba(255, 255, 255, 0.95);
+  --social-mono: #fff;
+  --verse: "Arcam de lignis setim compingite.";
+  --verse-ref: "Ex. XXV, 10";
+  color-scheme: dark;
+}
+
+[data-theme="mel"] {
+  /* Mel: manna tasting of honey, bright yellow and amber. */
+  --bg: #f7e9ad;
+  --bg-2: #efdc8e;
+  --ink: #2a1a04;
+  --muted: #7a5c18;
+  --faint: #cfb258;
+  --line: rgba(140, 90, 10, 0.18);
+  --line-strong: rgba(140, 90, 10, 0.38);
+  --cell: rgba(255, 252, 230, 0.5);
+  --cell-hover: rgba(255, 252, 230, 0.88);
+  --aura-a: rgba(255, 190, 30, 0.3);
+  --aura-b: rgba(240, 140, 20, 0.18);
+  --grain-opacity: 0.1;
+  --shadow: 0 30px 60px -34px rgba(120, 80, 0, 0.3);
+  --grad: linear-gradient(120deg, #a86a00 0%, #d89a10 36%, #f0c430 64%, #b87800 100%);
+  --kept-ink: #2a1a04;
+  --kept-edge: rgba(255, 250, 220, 0.55);
+  --kept-shade: 0 1px 0 rgba(255, 240, 190, 0.5);
+  --kept-glow: 0 0 16px -6px rgba(255, 190, 40, 0.6);
+  --today-ring: #a86a00;
+  --social-ink: rgb(70 76 90);
+  --social-ink-hover: rgb(20 24 34);
+  --social-mono: #000;
+  --verse: "Gustusque eius quasi similae cum melle.";
+  --verse-ref: "Ex. XVI, 31";
+  color-scheme: light;
+}
+
+[data-theme="nubes"] {
+  /* Nubes: a cloud received him, slate and silver mid-tones. */
+  --bg: #a9b6c6;
+  --bg-2: #9aa8ba;
+  --ink: #101826;
+  --muted: #36445a;
+  --faint: #7a889c;
+  --line: rgba(16, 24, 38, 0.16);
+  --line-strong: rgba(16, 24, 38, 0.36);
+  --cell: rgba(255, 255, 255, 0.22);
+  --cell-hover: rgba(255, 255, 255, 0.45);
+  --aura-a: rgba(255, 255, 255, 0.4);
+  --aura-b: rgba(50, 70, 110, 0.22);
+  --grain-opacity: 0.12;
+  --shadow: 0 30px 60px -34px rgba(20, 20, 40, 0.35);
+  --grad: linear-gradient(120deg, #1a2540 0%, #3e5280 38%, #6a84b8 64%, #2c3a60 100%);
+  --kept-ink: #fff;
+  --kept-edge: rgba(255, 255, 255, 0.4);
+  --kept-shade: 0 1px 2px rgba(10, 15, 30, 0.45);
+  --kept-glow: 0 0 0 transparent;
+  --today-ring: #f4f6fa;
+  --social-ink: rgb(70 76 90);
+  --social-ink-hover: rgb(20 24 34);
+  --social-mono: #000;
+  --verse: "Et nubes suscepit eum ab oculis eorum.";
+  --verse-ref: "Act. I, 9";
+  color-scheme: light;
+}
+
+[data-theme="myrrha"] {
+  /* Myrrha: gold, frankincense and myrrh, plum on dusty mauve. */
+  --bg: #bfa2b0;
+  --bg-2: #b2939f;
+  --ink: #1f1219;
+  --muted: #45303c;
+  --faint: #8f7280;
+  --line: rgba(31, 18, 25, 0.16);
+  --line-strong: rgba(31, 18, 25, 0.36);
+  --cell: rgba(255, 255, 255, 0.22);
+  --cell-hover: rgba(255, 255, 255, 0.45);
+  --aura-a: rgba(255, 230, 240, 0.4);
+  --aura-b: rgba(90, 40, 70, 0.22);
+  --grain-opacity: 0.12;
+  --shadow: 0 30px 60px -34px rgba(20, 20, 40, 0.35);
+  --grad: linear-gradient(120deg, #3a1632 0%, #703a5c 38%, #a0587e 64%, #4e2444 100%);
+  --kept-ink: #fff;
+  --kept-edge: rgba(255, 240, 248, 0.4);
+  --kept-shade: 0 1px 2px rgba(30, 10, 20, 0.45);
+  --kept-glow: 0 0 0 transparent;
+  --today-ring: #f6e6ee;
+  --social-ink: rgb(70 76 90);
+  --social-ink-hover: rgb(20 24 34);
+  --social-mono: #000;
+  --verse: "Et apertis thesauris suis obtulerunt ei munera, aurum, thus, et myrrham.";
+  --verse-ref: "Matth. II, 11";
+  color-scheme: light;
+}
+
+[data-theme="atramentum"] {
+  /* Atramentum: the scribe’s black ink on white paper, no colour at all. */
+  --bg: #f8f7f3;
+  --bg-2: #eeede8;
+  --ink: #0a0a0a;
+  --muted: #585858;
+  --faint: #bdbdba;
+  --line: rgba(10, 10, 10, 0.16);
+  --line-strong: rgba(10, 10, 10, 0.42);
+  --cell: rgba(255, 255, 255, 0.6);
+  --cell-hover: rgba(255, 255, 255, 0.95);
+  --aura-a: rgba(0, 0, 0, 0.05);
+  --aura-b: rgba(0, 0, 0, 0.04);
+  --grain-opacity: 0.13;
+  --shadow: 0 30px 60px -34px rgba(0, 0, 0, 0.3);
+  --grad: linear-gradient(120deg, #0a0a0a 0%, #4a4a4a 42%, #0a0a0a 100%);
+  --kept-ink: #fff;
+  --kept-edge: rgba(255, 255, 255, 0.18);
+  --kept-shade: 0 0 0 transparent;
+  --kept-glow: 0 0 0 transparent;
+  --today-ring: #0a0a0a;
+  --social-ink: rgb(70 76 90);
+  --social-ink-hover: rgb(20 24 34);
+  --social-mono: #000;
+  --verse: "Et ego scribebam in volumine atramento.";
+  --verse-ref: "Ier. XXXVI, 18";
   color-scheme: light;
 }
 
@@ -387,7 +823,288 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 :root[data-theme="eremus"] .toggle-orb::after { transform: translate(85%, -70%); }
 :root[data-theme="cinis"] .toggle-orb::after { transform: translate(75%, -15%); }
 :root[data-theme="caelum"] .toggle-orb::after { transform: translate(100%, -95%); }
+:root[data-theme="ninive"] .toggle-orb::after { transform: translate(65%, -55%); }
+:root[data-theme="horeb"] .toggle-orb::after { transform: translate(40%, -30%); }
+:root[data-theme="canaan"] .toggle-orb::after { transform: translate(50%, -20%); }
+:root[data-theme="columba"] .toggle-orb::after { transform: translate(95%, -90%); }
+:root[data-theme="iordanes"] .toggle-orb::after { transform: translate(80%, -60%); }
 .toggle-text { min-width: 8ch; text-align: left; }
+.toggle-chevron {
+  width: 10px;
+  height: 10px;
+  margin-left: -2px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  opacity: 0.7;
+  transition: transform 0.3s ease;
+}
+.toggle[aria-expanded="true"] { border-color: var(--ink); }
+.toggle[aria-expanded="true"] .toggle-chevron { transform: rotate(180deg); }
+
+/* ——— theme menu: a wide panel on larger screens, a bottom sheet on phones ——— */
+.theme-menu { position: relative; }
+.theme-backdrop { display: none; }
+.theme-panel {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  z-index: 50;
+  width: min(660px, calc(100vw - 2 * var(--gutter)));
+  max-height: min(78vh, 720px);
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--line-strong);
+  border-radius: 18px;
+  background: var(--bg-2);
+  box-shadow: var(--shadow), 0 2px 10px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+  transform-origin: top right;
+  animation: panel-in 0.22s cubic-bezier(0.2, 0.8, 0.2, 1);
+  transition: background-color 0.4s ease, border-color 0.4s ease;
+}
+@keyframes panel-in { from { opacity: 0; transform: translateY(-6px) scale(0.97); } }
+.theme-grip { display: none; }
+
+.theme-head {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 12px 12px 10px;
+  border-bottom: 1px solid var(--line);
+}
+.theme-tabs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+  padding: 3px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--cell);
+}
+.theme-tab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1px;
+  padding: 6px 4px;
+  border-radius: 9px;
+  color: var(--muted);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+.theme-tab:hover { color: var(--ink); }
+.theme-tab[aria-selected="true"] { background: var(--bg); color: var(--ink); box-shadow: 0 1px 6px -2px rgba(0, 0, 0, 0.3), inset 0 0 0 1px var(--line); }
+.theme-tab-latin { font-family: var(--serif); font-size: 16px; line-height: 1.1; }
+.theme-tab-english { font-family: var(--mono); font-size: 8.5px; letter-spacing: 0.2em; text-transform: uppercase; opacity: 0.8; }
+.theme-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.theme-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px 4px 6px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-family: var(--mono);
+  font-size: 9.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  white-space: nowrap;
+  transition: border-color 0.2s ease, color 0.2s ease, background-color 0.2s ease;
+}
+.theme-chip i { width: 10px; height: 10px; border-radius: 50%; box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25); }
+.theme-chip:hover { color: var(--ink); border-color: var(--line-strong); }
+.theme-chip[aria-pressed="true"] { color: var(--ink); border-color: var(--ink); background: var(--cell-hover); }
+
+.theme-body {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 6px 8px 8px;
+  scrollbar-width: thin;
+}
+.theme-recent { padding-bottom: 6px; margin-bottom: 4px; border-bottom: 1px solid var(--line); }
+.theme-recent-row { display: flex; gap: 6px; padding: 0 2px 4px; overflow-x: auto; scrollbar-width: none; }
+.theme-recent-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 10px 4px 4px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  font-family: var(--serif);
+  font-size: 15px;
+  white-space: nowrap;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+.theme-recent-item:hover, .theme-recent-item:focus-visible { border-color: var(--line-strong); background: var(--cell-hover); outline: none; }
+.theme-group + .theme-group { margin-top: 6px; padding-top: 4px; border-top: 1px solid var(--line); }
+.theme-group-title {
+  padding: 8px 8px 6px;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.theme-group-title span { opacity: 0.6; margin-left: 4px; }
+.theme-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2px 6px; }
+.theme-empty { padding: 28px 12px; text-align: center; font-style: italic; color: var(--muted); }
+
+.theme-option {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 7px 10px 7px 7px;
+  border-radius: 10px;
+  text-align: left;
+  outline: none;
+  transition: background-color 0.15s ease;
+}
+.theme-option.is-active { background: var(--cell-hover); }
+.theme-option:focus-visible { box-shadow: inset 0 0 0 1px var(--line-strong); }
+.theme-swatch {
+  position: relative;
+  flex: 0 0 auto;
+  width: 64px;
+  height: 44px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 5px 7px 6px;
+  border-radius: 7px;
+  background:
+    radial-gradient(60px 40px at 0% 0%, var(--aura-a), transparent 70%),
+    radial-gradient(60px 40px at 100% 100%, var(--aura-b), transparent 70%),
+    var(--bg);
+  box-shadow: inset 0 0 0 1px var(--line-strong);
+  overflow: hidden;
+}
+.theme-swatch.is-small { width: 34px; height: 26px; padding: 3px 5px; justify-content: center; border-radius: 6px; }
+.theme-swatch-xl {
+  font-family: var(--serif);
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  background: var(--grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  align-self: flex-start;
+}
+.theme-swatch.is-small .theme-swatch-xl { font-size: 15px; align-self: center; }
+.theme-swatch-days { display: flex; gap: 3px; }
+.theme-swatch-days i {
+  flex: 1;
+  height: 6px;
+  border-radius: 1.5px;
+  box-shadow: inset 0 0 0 0.5px var(--kept-edge);
+}
+.theme-option-text { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.theme-option-name { font-family: var(--serif); font-size: 19px; line-height: 1.1; color: var(--ink); }
+.theme-option-story {
+  font-family: var(--mono);
+  font-size: 9.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.theme-option-check {
+  flex: 0 0 auto;
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  visibility: hidden;
+}
+.theme-option[aria-selected="true"] .theme-option-check { visibility: visible; }
+.theme-option[aria-selected="true"] .theme-option-name { font-style: italic; }
+.theme-surprise {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px;
+  border-top: 1px solid var(--line);
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+.theme-surprise:hover, .theme-surprise:focus-visible { color: var(--ink); background: var(--cell-hover); outline: none; }
+.theme-surprise-scope { opacity: 0.7; }
+
+/* Narrower screens: one column. */
+@media (max-width: 900px) {
+  .theme-panel { width: min(400px, calc(100vw - 2 * var(--gutter))); }
+  .theme-grid { grid-template-columns: 1fr; }
+}
+
+/* Phones: the menu becomes a bottom sheet with swipeable tabs and chips. */
+@media (max-width: 759px) {
+  .theme-backdrop {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 49;
+    background: rgba(0, 0, 0, 0.45);
+    animation: fade-in 0.2s ease;
+  }
+  @keyframes fade-in { from { opacity: 0; } }
+  .theme-panel {
+    position: fixed;
+    top: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    max-height: 82dvh;
+    border-radius: 22px 22px 0 0;
+    border-bottom: 0;
+    padding-bottom: env(safe-area-inset-bottom);
+    transform-origin: bottom center;
+    animation: sheet-in 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+  @keyframes sheet-in { from { transform: translateY(100%); } }
+  .theme-grip {
+    display: block;
+    width: 40px;
+    height: 4px;
+    margin: 8px auto 0;
+    border-radius: 2px;
+    background: var(--line-strong);
+  }
+  .theme-head { padding: 10px 16px 10px; }
+  .theme-chips {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    margin: 0 -16px;
+    padding: 0 16px 2px;
+    scrollbar-width: none;
+  }
+  .theme-chips::-webkit-scrollbar, .theme-recent-row::-webkit-scrollbar { display: none; }
+  .theme-chip { padding: 7px 12px 7px 8px; }
+  .theme-body { padding: 4px 10px 8px; }
+  .theme-option { padding: 8px 10px 8px 8px; }
+  .theme-surprise { padding: 14px; }
+}
 
 .foot {
   margin-top: auto;
@@ -693,7 +1410,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   transition: opacity 0.3s;
 }
 
-.cell.kept { border-color: transparent; box-shadow: 0 10px 30px -12px var(--c1), inset 0 0 0 1px var(--kept-edge); }
+.cell.kept { border-color: transparent; box-shadow: 0 10px 30px -12px var(--c1), inset 0 0 0 1px var(--kept-edge), var(--kept-glow); }
 .cell.kept::before { clip-path: circle(75% at 50% 50%); }
 .cell.kept .cell-num { color: var(--kept-ink); text-shadow: var(--kept-shade); }
 .cell.kept .cell-idx { color: rgba(255, 255, 255, 0.7); }
