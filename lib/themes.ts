@@ -14,12 +14,23 @@ export const THEMES = [
   "canaan",
   "columba",
   "iordanes",
+  "smaragdus",
+  "purpura",
+  "punica",
+  "passio",
+  "mare",
+  "arca",
+  "mel",
+  "nubes",
+  "myrrha",
+  "atramentum",
 ] as const;
 export type Theme = (typeof THEMES)[number];
 
-type Meta = { label: string; story: string; mode: "dark" | "light" };
+export type Tone = "dark" | "mid" | "light";
+type Meta = { label: string; story: string; mode: Tone };
 
-// Name, the forty-day story behind it, and whether it is a night or a day theme.
+// Name, the story behind it, and its tone: near-black night, rich mid-tone colour, or light day.
 export const META: Record<Theme, Meta> = {
   dark: { label: "Nox", story: "Night burning toward dawn", mode: "dark" },
   light: { label: "Lux", story: "An illuminated manuscript", mode: "light" },
@@ -36,6 +47,16 @@ export const META: Record<Theme, Meta> = {
   canaan: { label: "Canaan", story: "Grapes, wine and honey", mode: "dark" },
   columba: { label: "Columba", story: "The dove returns", mode: "light" },
   iordanes: { label: "Iordanes", story: "The river Jordan", mode: "light" },
+  smaragdus: { label: "Smaragdus", story: "The emerald rainbow", mode: "mid" },
+  purpura: { label: "Purpura", story: "The purple robe", mode: "mid" },
+  punica: { label: "Punica", story: "The pomegranate", mode: "mid" },
+  passio: { label: "Passio", story: "Gethsemane", mode: "mid" },
+  mare: { label: "Mare", story: "Walking on the sea", mode: "mid" },
+  arca: { label: "Arca", story: "The ark of acacia wood", mode: "dark" },
+  mel: { label: "Mel", story: "Manna tasting of honey", mode: "light" },
+  nubes: { label: "Nubes", story: "A cloud received him", mode: "mid" },
+  myrrha: { label: "Myrrha", story: "Gifts of the Magi", mode: "mid" },
+  atramentum: { label: "Atramentum", story: "The scribe's ink", mode: "light" },
 };
 
 export const LABELS = Object.fromEntries(THEMES.map((t) => [t, META[t].label])) as Record<Theme, string>;

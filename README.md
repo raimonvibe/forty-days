@@ -66,7 +66,7 @@ Built with Next.js. Your marks stay in your own browser and are never sent anywh
 
 - **Tap** a box to keep a day.
 - **Hold** it (or right-click) to mark a *lapsus*: a day you stumbled. It doesn't erase the others.
-- **The theme menu** offers fifteen themes, each previewed with its own colours (hover or arrow keys to try one on the whole page, Escape to go back, or *Fortuna* for a random pick). Each has its own day palette, title gradient, hairlines and a Vulgate verse:
+- **The theme menu** offers twenty-five themes, each previewed with its own colours. Tabs sort them into *Noctes* (dark), *Media* (rich) and *Dies* (light), colour chips filter by the hues their days pass through, recent picks sit on top, and typing a letter jumps to a theme. Hover or arrow keys try one on the whole page, Escape goes back, and *Fortuna* picks at random. On phones the menu is a bottom sheet. Each has its own day palette, title gradient, hairlines and a Vulgate verse:
   - **Nox** — night burning toward dawn (Rom. 13:12)
   - **Lux** — an illuminated manuscript on vellum (Gen. 1:3)
   - **Vesper** — sunset over the sea (Luke 24:29)
@@ -82,6 +82,16 @@ Built with Next.js. Your marks stay in your own browser and are never sent anywh
   - **Canaan** — the spies return after forty days: grapes, wine, pomegranate and honey (Num. 13:26)
   - **Columba** — after forty days the dove goes out: mother-of-pearl (Gen. 8:6)
   - **Iordanes** — the river Jordan, where the forty days begin (Matt. 3:16)
+  - **Smaragdus** — emerald on emerald, the rainbow round the throne (Rev. 4:3)
+  - **Purpura** — royal violet, the purple robe (Mark 15:17)
+  - **Punica** — pomegranate fuchsia and magenta (Song 4:3)
+  - **Passio** — oxblood and crimson, Gethsemane (Luke 22:44)
+  - **Mare** — navy and cobalt, walking on the sea (Matt. 14:25)
+  - **Arca** — walnut, cedar and acacia, the ark (Ex. 25:10)
+  - **Mel** — honey yellow, manna tasting of honey (Ex. 16:31)
+  - **Nubes** — slate mid-tones, a cloud received him (Acts 1:9)
+  - **Myrrha** — plum on dusty mauve, gifts of the Magi (Matt. 2:11)
+  - **Atramentum** — black ink on white paper, no colour at all (Jer. 36:18)
 
 ```bash
 npm install

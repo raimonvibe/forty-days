@@ -112,7 +112,116 @@ export const PALETTES: Record<Theme, Stops> = {
     [50, 160, 128],
     [196, 156, 60],
   ],
+  // Smaragdus: a rainbow like an emerald round the throne (Rev. 4:3) — pure emerald greens.
+  smaragdus: [
+    [12, 96, 60],
+    [16, 130, 76],
+    [34, 160, 90],
+    [80, 186, 104],
+  ],
+  // Purpura: the purple robe of the Passion (Mk 15:17) — royal violet deepening to lavender.
+  purpura: [
+    [84, 34, 140],
+    [116, 56, 180],
+    [146, 84, 206],
+    [172, 118, 222],
+  ],
+  // Punica: "as a piece of a pomegranate" (Song 4:3) — fuchsia and magenta.
+  punica: [
+    [140, 14, 90],
+    [190, 24, 120],
+    [220, 50, 140],
+    [236, 96, 164],
+  ],
+  // Passio: Gethsemane, sweat like drops of blood (Lk 22:44) — oxblood to crimson.
+  passio: [
+    [110, 10, 20],
+    [156, 18, 28],
+    [196, 36, 40],
+    [226, 80, 64],
+  ],
+  // Mare: walking on the sea in the fourth watch (Mt 14:25) — navy, cobalt, ultramarine.
+  mare: [
+    [20, 42, 112],
+    [28, 70, 168],
+    [52, 104, 214],
+    [100, 146, 236],
+  ],
+  // Arca: the ark of acacia wood (Ex. 25:10) — walnut, cedar, acacia, oak.
+  arca: [
+    [86, 52, 30],
+    [124, 78, 42],
+    [160, 108, 58],
+    [190, 142, 88],
+  ],
+  // Mel: forty years of manna, tasting of honey (Ex. 16:31–35) — amber into bright honey.
+  mel: [
+    [196, 126, 0],
+    [218, 152, 8],
+    [234, 180, 24],
+    [244, 206, 56],
+  ],
+  // Nubes: a cloud received him (Acts 1:9) — storm slate lifting toward the light.
+  nubes: [
+    [36, 48, 74],
+    [58, 76, 110],
+    [86, 106, 146],
+    [116, 136, 176],
+  ],
+  // Myrrha: gold, frankincense and myrrh (Mt 2:11) — plum and dusty mauve.
+  myrrha: [
+    [70, 36, 62],
+    [100, 56, 88],
+    [130, 80, 114],
+    [158, 106, 140],
+  ],
+  // Atramentum: "I wrote them with ink in the book" (Jer. 36:18) — grey wash deepening to black.
+  atramentum: [
+    [128, 128, 126],
+    [92, 92, 90],
+    [58, 58, 57],
+    [18, 18, 18],
+  ],
 };
+
+export const FAMILIES = ["red", "orange", "yellow", "green", "blue", "violet", "magenta", "neutral"] as const;
+export type Family = (typeof FAMILIES)[number];
+
+export const FAMILY_LABELS: Record<Family, { latin: string; swatch: string }> = {
+  red: { latin: "Rubrum", swatch: "#c62a2a" },
+  orange: { latin: "Aurantium", swatch: "#e2782a" },
+  yellow: { latin: "Flavum", swatch: "#e8c02a" },
+  green: { latin: "Viride", swatch: "#2a9a5a" },
+  blue: { latin: "Caeruleum", swatch: "#2a6ac8" },
+  violet: { latin: "Violaceum", swatch: "#7a48c8" },
+  magenta: { latin: "Purpureum", swatch: "#c82a8a" },
+  neutral: { latin: "Neutrum", swatch: "#8a8a8a" },
+};
+
+function familyOf([r, g, b]: [number, number, number]): Family {
+  const max = Math.max(r, g, b) / 255;
+  const min = Math.min(r, g, b) / 255;
+  const l = (max + min) / 2;
+  const d = max - min;
+  const s = d === 0 ? 0 : d / (1 - Math.abs(2 * l - 1));
+  if (s < 0.15) return "neutral";
+  const [R, G, B] = [r / 255, g / 255, b / 255];
+  let h = max === R ? ((G - B) / d) % 6 : max === G ? (B - R) / d + 2 : (R - G) / d + 4;
+  h = (h * 60 + 360) % 360;
+  if (h < 18 || h >= 345) return "red";
+  if (h < 42) return "orange";
+  if (h < 70) return "yellow";
+  if (h < 170) return "green";
+  if (h < 255) return "blue";
+  if (h < 300) return "violet";
+  return "magenta";
+}
+
+// Every colour family a theme's forty days pass through, read from its own palette.
+export function familiesOf(stops: Stops): Family[] {
+  const found = new Set(stops.map(familyOf));
+  return FAMILIES.filter((f) => found.has(f));
+}
 
 export function colorAt(t: number, stops: Stops = PALETTES.dark) {
   const x = Math.min(Math.max(t, 0), 1) * (stops.length - 1);
