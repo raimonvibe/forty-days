@@ -76,6 +76,42 @@ export const PALETTES: Record<Theme, Stops> = {
     [84, 148, 204],
     [198, 152, 58],
   ],
+  // Ninive: Jonah in the deep (Jon. 2–3) — abyss blue lit by bioluminescent cyan and jade.
+  ninive: [
+    [16, 58, 104],
+    [14, 110, 146],
+    [18, 160, 162],
+    [52, 186, 158],
+  ],
+  // Horeb: forty days' walk to the still small voice (1 Kgs 19:8–12) — moonlit slate to silver-lilac.
+  horeb: [
+    [52, 58, 88],
+    [84, 94, 136],
+    [122, 130, 176],
+    [146, 134, 190],
+  ],
+  // Canaan: the spies return after forty days with the great cluster (Num. 13) — grape, wine, pomegranate, honey.
+  canaan: [
+    [76, 30, 100],
+    [128, 24, 62],
+    [196, 40, 66],
+    [212, 146, 34],
+  ],
+  // Columba: after forty days Noah sends out the dove (Gen. 8:6–11) — mother-of-pearl, every colour of the shell.
+  columba: [
+    [126, 110, 180],
+    [70, 146, 176],
+    [72, 160, 122],
+    [186, 146, 88],
+    [176, 110, 150],
+  ],
+  // Iordanes: the Jordan, where the forty days begin (Mt. 3:16–4:2) — deep river, jade, then the light.
+  iordanes: [
+    [14, 84, 106],
+    [18, 130, 128],
+    [50, 160, 128],
+    [196, 156, 60],
+  ],
 };
 
 export function colorAt(t: number, stops: Stops = PALETTES.dark) {

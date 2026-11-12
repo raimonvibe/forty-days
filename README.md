@@ -66,7 +66,7 @@ Built with Next.js. Your marks stay in your own browser and are never sent anywh
 
 - **Tap** a box to keep a day.
 - **Hold** it (or right-click) to mark a *lapsus*: a day you stumbled. It doesn't erase the others.
-- **The theme toggle** cycles through ten themes. Each has its own day palette, title gradient, hairlines and a Vulgate verse:
+- **The theme menu** offers fifteen themes, each previewed with its own colours (hover or arrow keys to try one on the whole page, Escape to go back, or *Fortuna* for a random pick). Each has its own day palette, title gradient, hairlines and a Vulgate verse:
   - **Nox** — night burning toward dawn (Rom. 13:12)
   - **Lux** — an illuminated manuscript on vellum (Gen. 1:3)
   - **Vesper** — sunset over the sea (Luke 24:29)
@@ -77,6 +77,11 @@ Built with Next.js. Your marks stay in your own browser and are never sent anywh
   - **Eremus** — forty days in the wilderness (Matt. 4:1)
   - **Cinis** — the ashes that open Lent (Gen. 3:19)
   - **Caelum** — the Ascension on the fortieth day (Acts 1:11)
+  - **Ninive** — Jonah in the deep, kept days glowing like living light (Jonah 3:4)
+  - **Horeb** — forty days' walk to the still small voice, in moonlit silver (1 Kgs 19:8)
+  - **Canaan** — the spies return after forty days: grapes, wine, pomegranate and honey (Num. 13:26)
+  - **Columba** — after forty days the dove goes out: mother-of-pearl (Gen. 8:6)
+  - **Iordanes** — the river Jordan, where the forty days begin (Matt. 3:16)
 
 ```bash
 npm install
