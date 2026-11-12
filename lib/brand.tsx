@@ -14,11 +14,11 @@ export const SITE_URL =
 
 export const INK = "#0b0a10";
 export const GRAD = "linear-gradient(120deg, #5c34a8 0%, #b03070 38%, #e2623e 70%, #e8be68 100%)";
-// The home screen icon wears the Oliva theme: hunter green with gold leaf.
-export const OLIVA_BG = "#0c2318";
-export const OLIVA_GREEN = "linear-gradient(140deg, #2c6a48 0%, #174a31 45%, #0c2318 100%)";
-export const OLIVA_GOLD = "linear-gradient(120deg, #9c7a2c 0%, #d8b45a 35%, #f3e2a4 62%, #c9a24a 100%)";
-const GOLD = "#d8b45a";
+// The home screen icon wears the Mel theme: bright honey with dark umber, like Mel's kept days.
+export const MEL_BG = "#f7e9ad";
+export const MEL_HONEY = "linear-gradient(140deg, #f8d860 0%, #ecb622 45%, #cc8c06 100%)";
+const MEL_INK = "linear-gradient(160deg, #4a3008 0%, #2a1a04 100%)";
+const UMBER = "#2a1a04";
 
 const fontDir = (pkg: string) => path.join(process.cwd(), "node_modules", "@fontsource", pkg, "files");
 
@@ -35,7 +35,7 @@ export async function loadFonts() {
   ];
 }
 
-// The fifth box, kept: the app's home screen face, in Oliva green and gold.
+// The fifth box, kept: the app's home screen face, in Mel honey and umber.
 export function DayFive({ size }: { size: number }) {
   const tiny = size < 64;
   return (
@@ -46,13 +46,13 @@ export function DayFive({ size }: { size: number }) {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        background: OLIVA_GREEN,
-        color: GOLD,
+        background: MEL_HONEY,
+        color: UMBER,
         fontFamily: "Serif",
       }}
     >
       {tiny ? (
-        <div style={{ fontSize: size * 0.82, lineHeight: 1, color: GOLD }}>V</div>
+        <div style={{ fontSize: size * 0.82, lineHeight: 1, color: UMBER }}>V</div>
       ) : (
         // A hairline frame inside the safe zone, like the box's border on the grid.
         <div
@@ -63,7 +63,7 @@ export function DayFive({ size }: { size: number }) {
             flexDirection: "column",
             alignItems: "center",
             justifyContent: "center",
-            border: `${Math.max(1, size / 180)}px solid rgba(216,180,90,0.55)`,
+            border: `${Math.max(1, size / 180)}px solid rgba(42,26,4,0.45)`,
             position: "relative",
           }}
         >
@@ -72,7 +72,7 @@ export function DayFive({ size }: { size: number }) {
               fontSize: size * 0.36,
               lineHeight: 1,
               marginTop: -size * 0.03,
-              backgroundImage: OLIVA_GOLD,
+              backgroundImage: MEL_INK,
               backgroundClip: "text",
               color: "transparent",
             }}
@@ -80,7 +80,7 @@ export function DayFive({ size }: { size: number }) {
             V
           </div>
           <svg width={size * 0.16} height={size * 0.16} viewBox="0 0 24 24" style={{ marginTop: size * 0.01 }}>
-            <path d="M5 12.5l4.2 4.2L19 7" fill="none" stroke={GOLD} strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M5 12.5l4.2 4.2L19 7" fill="none" stroke={UMBER} strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
           <div
             style={{
@@ -90,7 +90,7 @@ export function DayFive({ size }: { size: number }) {
               display: "flex",
               fontFamily: "Mono",
               fontSize: size * 0.055,
-              color: "rgba(216,180,90,0.8)",
+              color: "rgba(42,26,4,0.72)",
             }}
           >
             05
